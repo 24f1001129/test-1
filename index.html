@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>API Test</title></head>
+<body>
+  <h1>API Task</h1>
+  <div id="task-content"></div>
+
+  <script>
+    const task = {
+      "api_url": "https://example.com/mock-api.json",
+      "instructions": "Fetch the JSON from the API and return the value of the item named 'target'.",
+      "submit_url": "https://example.com/submit/api"
+    };
+    document.getElementById("task-content").innerText = JSON.stringify(task);
+  </script>
+</body>
+</html>
