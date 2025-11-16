@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>Chart Test</title></head>
+<body>
+  <h1>Visualization Task</h1>
+  <canvas id="chart" width="300" height="200"></canvas>
+  <p>Submit to: https://example.com/submit/chart</p>
+
+  <script>
+    const ctx = document.getElementById("chart").getContext("2d");
+
+    const data = {
+      A: 20,
+      B: 50,
+      C: 70,
+      D: 40
+    };
+
+    let x = 20;
+    for (const key in data) {
+      let h = data[key];
+      ctx.fillStyle = "black";
+      ctx.fillRect(x, 180 - h, 40, h);
+      ctx.fillText(key, x + 10, 195);
+      x += 60;
+    }
+  </script>
+</body>
+</html>
