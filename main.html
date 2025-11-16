@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>PDF Test</title></head>
+<body>
+  <h1>PDF Task</h1>
+  <div id="task-content"></div>
+
+  <script>
+    const encoded = btoa('<a href="https://24f1001129.github.io/test-1/test.pdf">Download the PDF</a><h2>Submit to https://example.com/submit/pdf</h2>');
+    document.getElementById("task-content").innerHTML = atob(encoded);
+  </script>
+</body>
+</html>
